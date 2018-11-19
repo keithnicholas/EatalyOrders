@@ -16,7 +16,7 @@ public class Menu extends AppCompatActivity {
 
     int minestrone = 0, caesar = 0, spaghetti = 0, lasagna = 0, fettuccine = 0, coke = 0, icedtea = 0;
     double minePrice = 7.00, caesarPrice = 8.00, spagPrice = 11.00, lasPrice = 10.00, fettPrice = 12.00, cokePrice = 2.00, ITPrice = 2.00;
-    double subtotal;
+    double subtotal, mineTotal, caeTotal, spagTotal, lasTotal, fettTotal, cokeTotal, ITTotal;
     RadioGroup takeoutOption;
     RadioButton pickup, delivery;
 
@@ -38,6 +38,12 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q1);
                 minestrone = minestrone+1;
                 quantity.setText(Integer.toString(minestrone));
+
+                mineTotal = minestrone * minePrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
+
             }
         });
 
@@ -49,6 +55,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q1);
                     minestrone = minestrone - 1;
                     quantity.setText(Integer.toString(minestrone));
+                    mineTotal = minestrone * minePrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -60,6 +71,11 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q2);
                 caesar = caesar+1;
                 quantity.setText(Integer.toString(caesar));
+
+                caeTotal = caesar * caesarPrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
             }
         });
 
@@ -71,6 +87,12 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q2);
                     caesar = caesar - 1;
                     quantity.setText(Integer.toString(caesar));
+
+                    caeTotal = caesar * caesarPrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
+
                 }
             }
         });
@@ -82,6 +104,12 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q3);
                 spaghetti = spaghetti+1;
                 quantity.setText(Integer.toString(spaghetti));
+
+                spagTotal = spaghetti * spagPrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
+
             }
         });
 
@@ -93,6 +121,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q3);
                     spaghetti = spaghetti - 1;
                     quantity.setText(Integer.toString(spaghetti));
+
+                    spagTotal = spaghetti * spagPrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -104,6 +137,11 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q4);
                 lasagna = lasagna+1;
                 quantity.setText(Integer.toString(lasagna));
+
+                lasTotal = lasagna * lasPrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
             }
         });
 
@@ -115,6 +153,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q4);
                     lasagna = lasagna - 1;
                     quantity.setText(Integer.toString(lasagna));
+
+                    lasTotal = lasagna * lasPrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -126,6 +169,11 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q5);
                 fettuccine = fettuccine+1;
                 quantity.setText(Integer.toString(fettuccine));
+
+                fettTotal = fettuccine * fettPrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
             }
         });
 
@@ -137,6 +185,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q5);
                     fettuccine = fettuccine - 1;
                     quantity.setText(Integer.toString(fettuccine));
+
+                    fettTotal = fettuccine * fettPrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -148,6 +201,11 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q6);
                 coke = coke+1;
                 quantity.setText(Integer.toString(coke));
+
+                cokeTotal = coke * cokePrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
             }
         });
 
@@ -159,6 +217,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q6);
                     coke = coke - 1;
                     quantity.setText(Integer.toString(coke));
+
+                    cokeTotal = coke * cokePrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -170,6 +233,11 @@ public class Menu extends AppCompatActivity {
                 TextView quantity = (TextView) findViewById(R.id.q7);
                 icedtea = icedtea+1;
                 quantity.setText(Integer.toString(icedtea));
+
+                ITTotal = icedtea * ITPrice;
+                subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                subtotalTextView.setText("$" + decimal.format(subtotal));
             }
         });
 
@@ -181,6 +249,11 @@ public class Menu extends AppCompatActivity {
                     TextView quantity = (TextView) findViewById(R.id.q7);
                     icedtea = icedtea - 1;
                     quantity.setText(Integer.toString(icedtea));
+
+                    ITTotal = icedtea * ITPrice;
+                    subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+                    TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+                    subtotalTextView.setText("$" + decimal.format(subtotal));
                 }
             }
         });
@@ -189,8 +262,12 @@ public class Menu extends AppCompatActivity {
         pickup = findViewById(R.id.pickup);
         delivery = findViewById(R.id.delivery);
 
-        //test
-        subtotal = 1;
+
+
+
+       // subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
+//        TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
+//        subtotalTextView.setText("$" + decimal.format(subtotal));
     }
 
     public void continueButton(View view){
@@ -207,6 +284,7 @@ public class Menu extends AppCompatActivity {
 
         }else{
             Intent intent = new Intent(this, DeliveryOrder.class);
+            intent.putExtra("subtotal", subtotal);
             startActivity(intent);
             //Send delivery charge to Order Summary
         }

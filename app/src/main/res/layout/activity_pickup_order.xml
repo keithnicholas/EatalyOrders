@@ -93,6 +93,7 @@
         android:layout_alignEnd="@+id/nameDEditText"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="29dp"
+        android:onClick="continueButton"
         android:text="Continue" />
 
     <Button
@@ -101,6 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/continueButton"
         android:layout_toEndOf="@+id/textView34"
+        android:onClick="menuButton"
         android:text="Menu" />
 
 </RelativeLayout>
