@@ -30,15 +30,15 @@ public class Booking extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
-        getSupportActionBar().setTitle("Reservation Booking");
-
+//        getSupportActionBar().setTitle("Reservation Booking");
+        setTitle("Reservation Booking");
         editName = findViewById(R.id.nResEditText);
         editPhone = findViewById(R.id.pnEditText);
         editPeople = findViewById(R.id.peopleEditText);
 
 
 
-        displayDate = (TextView) findViewById(R.id.datePicker);
+        displayDate = findViewById(R.id.datePicker);
         displayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,12 +83,24 @@ public class Booking extends AppCompatActivity {
             return;
         }
 
-        if(editPhone.getText().toString().length() < 1){
+        if(editPhone.getText().toString().length() != 10){
             Toast.makeText(this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(editPeople.getText().toString().length() < 1){
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        String[] arr_date = displayDate.getText().toString().split("/");//mm/dd/yyyy
+
+        if(Integer.parseInt(arr_date[0]) < month || Integer.parseInt(arr_date[1]) < day
+                || Integer.parseInt(arr_date[2]) < year) {
+            Toast.makeText(this, "Invalid Reservation Date", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(editPeople.getText().toString().length() < 1 ||
+                Integer.parseInt(editPeople.getText().toString()) < 1){
             Toast.makeText(this, "Invalid number of people", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -102,7 +114,9 @@ public class Booking extends AppCompatActivity {
         intentReserve.putExtra("name", editName.getText().toString());
         intentReserve.putExtra("phone", editPhone.getText().toString());
         intentReserve.putExtra("people", editPeople.getText().toString());
-
+        intentReserve.putExtra("time", spinnerH.getSelectedItem().toString() + ":" +
+                spinnerM.getSelectedItem().toString() + "pm");
+        intentReserve.putExtra("date", displayDate.getText().toString());
         startActivity(intentReserve);
     }
 

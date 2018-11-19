@@ -14,17 +14,24 @@ public class ResConfirm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_confirm);
 
-        getSupportActionBar().setTitle("Reservation Confirmation");
-
-        Resources res = getResources();
+//        getSupportActionBar().setTitle("Reservation Confirmation");
+        setTitle("Reservation Confirmation");
+//        Resources res = getResources();
 
         Bundle extras = getIntent().getExtras();
         assert extras != null;
 
         //datePicker
         TextView date = findViewById(R.id.resDateConfirm);
-        String temp = res.getString(R.string.datetext);
+//        String temp = res.getString(R.string.datetext);
+        String temp = getIntent().getStringExtra("date");
         date.setText(temp);
+
+        //set time
+        String str_time = getIntent().getStringExtra("time");
+        TextView time = findViewById(R.id.resTimeConfirm);
+        time.setText(str_time);
+
     }
 
     public void finish(View view){

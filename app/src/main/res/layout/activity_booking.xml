@@ -78,7 +78,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
 
     <TextView
         android:id="@+id/datePicker"
