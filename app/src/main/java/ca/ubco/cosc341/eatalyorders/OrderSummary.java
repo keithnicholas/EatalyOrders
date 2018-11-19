@@ -1,6 +1,7 @@
 package ca.ubco.cosc341.eatalyorders;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ public class OrderSummary extends AppCompatActivity {
     int cutlery = 0, plates = 0;
 
     DecimalFormat decimal = new DecimalFormat("0.00");
-    double subtotal, tax, total;
+    double tax, total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,9 @@ public class OrderSummary extends AppCompatActivity {
         getSupportActionBar().setTitle("Order Summary");
 
         //TODO: Take in order items, quantities, and prices
+
+        Bundle extras = getIntent().getExtras();
+        assert extras != null;
 
         Button addCutlery = (Button) findViewById(R.id.addCutlery);
         addCutlery.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +68,14 @@ public class OrderSummary extends AppCompatActivity {
                 quantity.setText(Integer.toString(plates));
             }
         });
+
+        TextView subtotal = (TextView) findViewById(R.id.subSummary);
+        double subDouble = extras.getDouble("subtotal");
+        Double doubleInstance = new Double(subDouble);
+        String temp = doubleInstance.toString();
+        subtotal.setText(temp);
+
+
 
     }
 
