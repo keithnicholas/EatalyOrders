@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderSummary">
+
+    <Button
+        android:id="@+id/addCutlery"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/subPlates"
+        android:layout_marginBottom="-242dp"
+        android:layout_toEndOf="@+id/subPlates"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subCutlery"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/subPlates"
+        android:layout_alignStart="@+id/subPlates"
+        android:layout_marginBottom="-242dp"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addPlates"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/subPlates"
+        android:layout_toEndOf="@+id/subPlates"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subPlates"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="242dp"
+        android:layout_toEndOf="@+id/textView49"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="196dp"
+        android:layout_toStartOf="@+id/confirmButton"
+        android:text="Total:"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="224dp"
+        android:layout_toStartOf="@+id/confirmButton"
+        android:text="Tax (GST):"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="254dp"
+        android:layout_toStartOf="@+id/confirmButton"
+        android:text="Subtotal:"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="confirm"
+        android:text="Confirm" />
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/confirmButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="menu"
+        android:text="Menu" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:text="Comments (such as allergies, preferences, etc):" />
+
+    <TextView
+        android:id="@+id/subSummary"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView25"
+        android:layout_alignTop="@+id/textView41"
+        android:layout_marginEnd="-19dp"
+        android:text="$0.00" />
+
+    <TextView
+        android:id="@+id/totalSummary"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/subSummary"
+        android:layout_alignTop="@+id/textView43"
+        android:text="$0.00" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/subSummary"
+        android:layout_alignTop="@+id/textView42"
+        android:text="$0.00" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/subCutlery"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="57dp"
+        android:text="Cutlery" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/subPlates"
+        android:layout_toStartOf="@+id/subPlates"
+        android:text="Plates" />
+
+    <TextView
+        android:id="@+id/cutleryQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView49"
+        android:layout_toStartOf="@+id/confirmButton"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/platesQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/subPlates"
+        android:layout_toStartOf="@+id/confirmButton"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="334dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+</RelativeLayout>

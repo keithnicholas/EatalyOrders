@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <Button
+        android:id="@+id/subCaesar"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView29"
+        android:layout_toStartOf="@+id/addMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textView272"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="136dp"
+        android:text="Mains:"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/textView273"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginBottom="258dp"
+        android:text="Beverages:"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="19dp"
+        android:text="Appetizers"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView273"
+        android:layout_below="@+id/textView4"
+        android:text="Minestrone" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="78dp"
+        android:text="Caesar Salad" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="164dp"
+        android:text="Spaghetti 'n' Meatballs" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="202dp"
+        android:text="Four Cheese Lasagna" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginTop="239dp"
+        android:text="Fettuccine Alfredo" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="297dp"
+        android:layout_height="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pickup" />
+
+        <RadioButton
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delivery" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="41dp"
+        android:onClick="continueButton"
+        android:text="Continue" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView273"
+        android:layout_marginBottom="110dp"
+        android:text="Please select an option:" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginBottom="231dp"
+        android:text="Coke" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginBottom="191dp"
+        android:text="Iced Tea" />
+
+    <Button
+        android:id="@+id/subMine"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignStart="@+id/subCaesar"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$7.00" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView9"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$8.00" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$11.00" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$10.00" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$12.00" />
+
+    <Button
+        android:id="@+id/addMine"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_toStartOf="@+id/q1"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/addCaesar"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView29"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subSpaghetti"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_alignStart="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addSpaghetti"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView12"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subLasagna"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView13"
+        android:layout_alignStart="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addLasagna"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView13"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subFettuccine"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_alignStart="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addFettuccine"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subCoke"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/subMine"
+        android:layout_below="@+id/textView273"
+        android:layout_marginTop="-258dp"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addCoke"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView273"
+        android:layout_marginTop="-258dp"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/subIcedTea"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView28"
+        android:layout_alignStart="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/addIcedTea"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/textView28"
+        android:layout_toEndOf="@+id/subMine"
+        android:background="?android:attr/listChoiceIndicatorSingle"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="26dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView4"
+        android:layout_marginEnd="8dp"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/q2"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView29"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/q3"
+        android:layout_width="29dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView12"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/q4"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/q5"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView14"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$2.00" />
+
+    <TextView
+        android:id="@+id/q6"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView28"
+        android:layout_toStartOf="@+id/confirm"
+        android:text="$2.00" />
+
+    <TextView
+        android:id="@+id/q7"
+        android:layout_width="28dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView28"
+        android:layout_toEndOf="@+id/addMine"
+        android:text="Q" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/subTotal"
+        android:layout_toEndOf="@+id/textView7"
+        android:text="Subtotal:"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <TextView
+        android:id="@+id/subTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="139dp"
+        android:layout_marginEnd="22dp"
+        android:text="$0.00"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+</RelativeLayout>

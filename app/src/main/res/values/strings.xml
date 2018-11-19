@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EatalyOrders</string>
+
+    <string-array name="hour">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string name="datetext">Date</string>
+
+    <string-array name="minutes">
+        <item>00</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+
+    <string-array name="payment">
+        <item>Cash</item>
+        <item>Debit</item>
+    </string-array>
+</resources>
