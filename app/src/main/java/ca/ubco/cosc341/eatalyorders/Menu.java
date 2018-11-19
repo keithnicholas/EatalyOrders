@@ -27,8 +27,6 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //TODO: Display subtotal
-
         getSupportActionBar().setTitle("Menu");
 
         Button addMine  =(Button) findViewById(R.id.addMine);
@@ -261,13 +259,6 @@ public class Menu extends AppCompatActivity {
         takeoutOption = findViewById(R.id.radioGroup);
         pickup = findViewById(R.id.pickup);
         delivery = findViewById(R.id.delivery);
-
-
-
-
-       // subtotal = mineTotal + caeTotal + spagTotal + lasTotal + fettTotal + cokeTotal + ITTotal;
-//        TextView subtotalTextView = (TextView) findViewById(R.id.subTotal);
-//        subtotalTextView.setText("$" + decimal.format(subtotal));
     }
 
     public void continueButton(View view){
@@ -286,7 +277,6 @@ public class Menu extends AppCompatActivity {
             Intent intent = new Intent(this, DeliveryOrder.class);
             intent.putExtra("subtotal", subtotal);
             startActivity(intent);
-            //Send delivery charge to Order Summary
         }
 
     }
