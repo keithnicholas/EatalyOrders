@@ -162,16 +162,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView49"
-        android:layout_toStartOf="@+id/confirmButton"
-        android:text="TextView" />
+        android:layout_toStartOf="@+id/confirmButton" />
 
     <TextView
         android:id="@+id/platesQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/subPlates"
-        android:layout_toStartOf="@+id/confirmButton"
-        android:text="TextView" />
+        android:layout_toStartOf="@+id/confirmButton" />
 
     <EditText
         android:id="@+id/editText2"

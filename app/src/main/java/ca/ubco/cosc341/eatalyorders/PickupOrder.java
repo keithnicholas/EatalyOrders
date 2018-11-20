@@ -18,7 +18,7 @@ public class PickupOrder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pickup_order);
 
-        getSupportActionBar().setTitle("Pickup Order");
+        getSupportActionBar().setTitle("Pickup");
 
         editName = findViewById(R.id.nameDEditText);
         editPhone = findViewById(R.id.pnDEditText);
@@ -52,11 +52,18 @@ public class PickupOrder extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, OrderSummary.class);
-        intent.putExtra("name_pickup", editName.getText().toString());
-        intent.putExtra("phone_number_pickup", editPhone.getText().toString());
-        intent.putExtra("hour_pickup", spinnerH.getSelectedItem().toString());
-        intent.putExtra("minutes_pickup", spinnerM.getSelectedItem().toString());
+        Bundle oldBundle = getIntent().getExtras();
+        oldBundle.putString("name_pickup", editName.getText().toString());
+        oldBundle.putString("phone_number_pickup", editPhone.getText().toString());
+        oldBundle.putString("hour_pickup", spinnerH.getSelectedItem().toString());
+        oldBundle.putString("minutes_pickup", spinnerM.getSelectedItem().toString());
+        String test = "";
+        Toast.makeText(this, "TES" + oldBundle.getDouble("subtotal"), Toast.LENGTH_SHORT).show();
 
+        Double oldSubtotal = getIntent().getExtras().getDouble("subtotal");
+        oldBundle.putString("subtotal", oldSubtotal.toString());
+        //intent.putExtras(getIntent().getExtras());
+        intent.putExtras(oldBundle);
         spinnerH.setSelection(0);
         spinnerM.setSelection(0);
 

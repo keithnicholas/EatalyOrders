@@ -19,7 +19,7 @@ public class DeliveryOrder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_order);
 
-        getSupportActionBar().setTitle("Delivery Order");
+        getSupportActionBar().setTitle("Delivery OrderRng");
 
         editName = findViewById(R.id.nameDEditText);
         editPhone = findViewById(R.id.pnDEditText);

@@ -271,11 +271,18 @@ public class Menu extends AppCompatActivity {
             return;
         }else if (subtotal > 0 && pickup.isChecked()){
             Intent intent = new Intent(this, PickupOrder.class);
+            Bundle bundle = new Bundle();
+            bundle.putDouble("subtotal", subtotal);
+            intent.putExtras(bundle);
+            //intent.putExtra("subtotal", String.valueOf(subtotal));
             startActivity(intent);
 
         }else{
             Intent intent = new Intent(this, DeliveryOrder.class);
-            intent.putExtra("subtotal", subtotal);
+            //intent.putExtra("subtotal", subtotal);
+            Bundle bundle = new Bundle();
+            bundle.putDouble("subtotal", subtotal);
+            intent.putExtras(bundle);
             startActivity(intent);
         }
 
