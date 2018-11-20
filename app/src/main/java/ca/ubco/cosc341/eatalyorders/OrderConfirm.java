@@ -29,7 +29,7 @@ public class OrderConfirm extends AppCompatActivity {
 //        date.setHours(Integer.valueOf(hoursOrder));
 //        date.setHours(Integer.valueOf(minuteOrder));
 //        DateFormat df = new SimpleDateFormat("h:mm a");
-        String timeOfDelivery = bundle.getString("hour") + ":"
+        String timeOfDelivery = "Thank you for your purchase.The order has been placed and will be ready at " + bundle.getString("hour") + ":"
                 + bundle.getString("minutes") + "pm";
         timeTv.setText(timeOfDelivery);
 

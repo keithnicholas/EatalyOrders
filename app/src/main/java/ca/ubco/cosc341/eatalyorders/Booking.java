@@ -105,11 +105,6 @@ public class Booking extends AppCompatActivity {
             return;
         }
 
-        /*if(!displayDate.isSelected()){
-            Toast.makeText(this, "Please select a date.", Toast.LENGTH_SHORT).show();
-
-        }*/
-
         Intent intentReserve = new Intent(this, ResConfirm.class);
         intentReserve.putExtra("name", editName.getText().toString());
         intentReserve.putExtra("phone", editPhone.getText().toString());
