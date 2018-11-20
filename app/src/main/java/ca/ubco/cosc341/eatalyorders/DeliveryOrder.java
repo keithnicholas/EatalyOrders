@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 public class DeliveryOrder extends AppCompatActivity {
 
     Spinner spinnerH, spinnerM, spinnerP;
@@ -56,6 +58,16 @@ public class DeliveryOrder extends AppCompatActivity {
 
         if(editAddress.getText().toString().length() < 5){
             Toast.makeText(this, "Please enter an address.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        //validation for pickup time
+        Calendar ca_now = Calendar.getInstance();
+        Calendar ca_user_select = Calendar.getInstance();
+        ca_user_select.set(Calendar.HOUR, Integer.parseInt(spinnerH.getSelectedItem().toString()));
+        ca_user_select.set(Calendar.MINUTE, Integer.parseInt(spinnerM.getSelectedItem().toString()));
+        if(ca_now.before(ca_user_select)) {
+            Toast.makeText(this, "Invalid Delivery Time.", Toast.LENGTH_SHORT).show();
             return;
         }
 
