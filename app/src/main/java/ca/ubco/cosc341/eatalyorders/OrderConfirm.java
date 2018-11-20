@@ -23,29 +23,27 @@ public class OrderConfirm extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         //TODO: Take in time order is placed & generate a random order number
-
         //Produce estimated time of delivery with order number
-        String hoursOrder = bundle.getString("hour_pickup");
-        String minuteOrder = bundle.getString("minutes_pickup");
-        TextView timeTv = (TextView) findViewById(R.id.textView22);
-        Date date = new Date();
-        date.setHours(Integer.valueOf(hoursOrder));
-        date.setHours(Integer.valueOf(minuteOrder));
-        DateFormat df = new SimpleDateFormat("h:mm a");
-        String timeOfDelivery = df.format(date.getTime());
+        TextView timeTv = findViewById(R.id.textView22);
+//        Date date = new Date();
+//        date.setHours(Integer.valueOf(hoursOrder));
+//        date.setHours(Integer.valueOf(minuteOrder));
+//        DateFormat df = new SimpleDateFormat("h:mm a");
+        String timeOfDelivery = bundle.getString("hour") + ":"
+                + bundle.getString("minutes") + "pm";
         timeTv.setText(timeOfDelivery);
 
         //generate unique random order number
-        TextView orderIdTv = (TextView) findViewById(R.id.textView24);
-
+        TextView orderIdTv = findViewById(R.id.textView24);
 
         Random rand = new Random(); //set random order id
         int id = 1 + rand.nextInt(100);
-        orderIdTv.setText(id);
+        orderIdTv.setText(Integer.toString(id));
     }
 
     public void done(View view){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 }

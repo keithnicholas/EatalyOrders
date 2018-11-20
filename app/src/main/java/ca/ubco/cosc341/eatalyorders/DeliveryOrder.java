@@ -60,11 +60,24 @@ public class DeliveryOrder extends AppCompatActivity {
         }
 
         Intent intent = new Intent(this, OrderSummary.class);
-        intent.putExtra("name_delivery", editName.getText().toString());
-        intent.putExtra("phone_number_delivery", editPhone.getText().toString());
-        intent.putExtra("hour_delivery", spinnerH.getSelectedItem().toString());
-        intent.putExtra("minutes_delivery", spinnerM.getSelectedItem().toString());
-        intent.putExtra("payment", spinnerP.getSelectedItem().toString());
+        //rewrote intent content by using Bundle
+        Bundle new_bundle = new Bundle();
+        new_bundle.putString("name_delivery", editName.getText().toString());
+        new_bundle.putString("phone_number_delivery", editPhone.getText().toString());
+        new_bundle.putString("hour", spinnerH.getSelectedItem().toString());
+        new_bundle.putString("minutes", spinnerM.getSelectedItem().toString());
+        new_bundle.putString("payment", spinnerP.getSelectedItem().toString());
+        //receiving bundle from menu
+        Double subtotal = getIntent().getExtras().getDouble("subtotal");
+        new_bundle.putString("subtotal", subtotal.toString());
+//        intent.putExtra("name_delivery", editName.getText().toString());
+//        intent.putExtra("phone_number_delivery", editPhone.getText().toString());
+//        intent.putExtra("hour_delivery", spinnerH.getSelectedItem().toString());
+//        intent.putExtra("minutes_delivery", spinnerM.getSelectedItem().toString());
+//        intent.putExtra("payment", spinnerP.getSelectedItem().toString());
+
+        //intent.putExtras(getIntent().getExtras());
+        intent.putExtras(new_bundle);
 
         spinnerH.setSelection(0);
         spinnerM.setSelection(0);

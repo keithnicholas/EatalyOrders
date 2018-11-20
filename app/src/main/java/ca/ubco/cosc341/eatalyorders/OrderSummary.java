@@ -32,21 +32,21 @@ public class OrderSummary extends AppCompatActivity {
         //extras=  getIntent();
         //assert extras != null;
 
-        Button addCutlery = (Button) findViewById(R.id.addCutlery);
+        Button addCutlery = findViewById(R.id.addCutlery);
         addCutlery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView quantity = (TextView) findViewById(R.id.cutleryQuantity);
+                TextView quantity = findViewById(R.id.cutleryQuantity);
                 cutlery = cutlery +1;
                 quantity.setText(Integer.toString(cutlery));
             }
         });
 
-        Button subCutlery = (Button) findViewById(R.id.subCutlery);
+        Button subCutlery = findViewById(R.id.subCutlery);
         subCutlery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView quantity = (TextView) findViewById(R.id.cutleryQuantity);
+                TextView quantity = findViewById(R.id.cutleryQuantity);
                 if (cutlery > 0) {
                     cutlery = cutlery - 1;
                 }
@@ -54,21 +54,21 @@ public class OrderSummary extends AppCompatActivity {
             }
         });
 
-        Button addPlates = (Button) findViewById(R.id.addPlates);
+        Button addPlates = findViewById(R.id.addPlates);
         addPlates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView quantity = (TextView) findViewById(R.id.platesQuantity);
+                TextView quantity = findViewById(R.id.platesQuantity);
                 plates = plates +1;
                 quantity.setText(Integer.toString(plates));
             }
         });
 
-        Button subPlates = (Button) findViewById(R.id.subPlates);
+        Button subPlates = findViewById(R.id.subPlates);
         subPlates.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView quantity = (TextView) findViewById(R.id.platesQuantity);
+                TextView quantity = findViewById(R.id.platesQuantity);
                 if (plates > 0) {
                     plates = plates - 1;
                 }
@@ -77,7 +77,7 @@ public class OrderSummary extends AppCompatActivity {
         });
 
         //set subtotal
-        TextView subtotal = (TextView) findViewById(R.id.subSummary);
+        TextView subtotal = findViewById(R.id.subSummary);
 
         double subDouble = Double.valueOf(extras.getString("subtotal"));
         Double doubleInstance = new Double(subDouble);
@@ -86,11 +86,11 @@ public class OrderSummary extends AppCompatActivity {
         subtotal.setText("$" + decimal.format(doubleInstance));
 
         tax = 0.12 * Double.valueOf(temp);
-        TextView taxTv = (TextView) findViewById(R.id.tax);
+        TextView taxTv = findViewById(R.id.tax);
         taxTv.setText("$" + decimal.format(tax));
 
         total = Double.valueOf(temp) + tax;
-        TextView totalTv = (TextView) findViewById(R.id.totalSummary);
+        TextView totalTv = findViewById(R.id.totalSummary);
         totalTv.setText("$" + decimal.format(total));
     }
 
@@ -104,14 +104,12 @@ public class OrderSummary extends AppCompatActivity {
         Intent intentC = new Intent(this, OrderConfirm.class);
         Bundle old = getIntent().getExtras();
         Bundle newbundle = new Bundle();
-        String hoursPickup = old.getString("hour_pickup");
-        String minPickup = old.getString("minutes_pickup");
-        newbundle.putString("hour_pickup", hoursPickup);
-        newbundle.putString("minutes_pickup", minPickup);
+        newbundle.putString("hour", old.getString("hour"));
+        newbundle.putString("minutes", old.getString("minutes"));
 
         //TODO: Take in quantities
 
-        EditText comments = (EditText) findViewById(R.id.editText2);
+        EditText comments = findViewById(R.id.editText2);
 
         newbundle.putString("comments_pickup", comments.getText().toString());
         //intentC.putExtras(orderConfirmBundle);

@@ -55,8 +55,8 @@ public class PickupOrder extends AppCompatActivity {
         Bundle oldBundle = getIntent().getExtras();
         oldBundle.putString("name_pickup", editName.getText().toString());
         oldBundle.putString("phone_number_pickup", editPhone.getText().toString());
-        oldBundle.putString("hour_pickup", spinnerH.getSelectedItem().toString());
-        oldBundle.putString("minutes_pickup", spinnerM.getSelectedItem().toString());
+        oldBundle.putString("hour", spinnerH.getSelectedItem().toString());
+        oldBundle.putString("minutes", spinnerM.getSelectedItem().toString());
         String test = "";
         Toast.makeText(this, "TES" + oldBundle.getDouble("subtotal"), Toast.LENGTH_SHORT).show();
 
