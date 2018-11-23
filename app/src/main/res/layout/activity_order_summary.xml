@@ -38,10 +38,12 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignTop="@+id/subPlates"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/subPlates"
         android:background="?android:attr/listChoiceIndicatorSingle"
-        android:minHeight="40dp"
         android:minWidth="40dp"
+        android:minHeight="40dp"
         android:text="+" />
 
     <Button
@@ -181,4 +183,33 @@
         android:ems="10"
         android:inputType="textMultiLine" />
 
+    <TextView
+        android:id="@+id/summary_food"
+        android:layout_width="87dp"
+        android:layout_height="185dp"
+        android:layout_alignStart="@+id/textView25"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/summary_food" />
+
+    <TextView
+        android:id="@+id/summary_quantity"
+        android:layout_width="28dp"
+        android:layout_height="182dp"
+        android:layout_alignStart="@+id/textView25"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/summary_quantity" />
+
+    <TextView
+        android:id="@+id/summary_price"
+        android:layout_width="80dp"
+        android:layout_height="182dp"
+        android:layout_alignStart="@+id/textView25"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/summary_price" />
 </RelativeLayout>

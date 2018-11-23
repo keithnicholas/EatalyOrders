@@ -21,7 +21,7 @@ public class DeliveryOrder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_order);
 
-        getSupportActionBar().setTitle("Delivery OrderRng");
+        getSupportActionBar().setTitle("Delivery");
 
         editName = findViewById(R.id.nameDEditText);
         editPhone = findViewById(R.id.pnDEditText);
@@ -45,8 +45,7 @@ public class DeliveryOrder extends AppCompatActivity {
     }
 
     public void continueButton(View view){
-        int pnLength = editPhone.getText().toString().length();
-        if((pnLength < 10) || (pnLength > 10)){
+        if(editPhone.getText().toString().length() != 10){
             Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -73,24 +72,10 @@ public class DeliveryOrder extends AppCompatActivity {
 
         Intent intent = new Intent(this, OrderSummary.class);
         //rewrote intent content by using Bundle
-        Bundle new_bundle = new Bundle();
-        new_bundle.putString("name_delivery", editName.getText().toString());
-        new_bundle.putString("phone_number_delivery", editPhone.getText().toString());
-        new_bundle.putString("hour", spinnerH.getSelectedItem().toString());
-        new_bundle.putString("minutes", spinnerM.getSelectedItem().toString());
-        new_bundle.putString("payment", spinnerP.getSelectedItem().toString());
-        //receiving bundle from menu
-        Double subtotal = getIntent().getExtras().getDouble("subtotal");
-        new_bundle.putString("subtotal", subtotal.toString());
-//        intent.putExtra("name_delivery", editName.getText().toString());
-//        intent.putExtra("phone_number_delivery", editPhone.getText().toString());
-//        intent.putExtra("hour_delivery", spinnerH.getSelectedItem().toString());
-//        intent.putExtra("minutes_delivery", spinnerM.getSelectedItem().toString());
-//        intent.putExtra("payment", spinnerP.getSelectedItem().toString());
-
-        //intent.putExtras(getIntent().getExtras());
+        Bundle new_bundle = getOrder();
+        assert new_bundle != null;
         intent.putExtras(new_bundle);
-
+        //reset spinner
         spinnerH.setSelection(0);
         spinnerM.setSelection(0);
         spinnerP.setSelection(0);
@@ -100,5 +85,55 @@ public class DeliveryOrder extends AppCompatActivity {
 
     public void menuButton(View view){
         finish();
+    }
+
+
+    public Bundle getOrder() {
+        Bundle oldBundle = getIntent().getExtras();
+        //acquire customer info from PickupOrder
+        oldBundle.putString("customer_name", editName.getText().toString());
+        oldBundle.putString("phone_number", editPhone.getText().toString());
+        oldBundle.putString("address", editAddress.getText().toString());
+        oldBundle.putString("hour", spinnerH.getSelectedItem().toString());
+        oldBundle.putString("minutes", spinnerM.getSelectedItem().toString());
+        oldBundle.putString("payment", spinnerP.getSelectedItem().toString());
+        //acquire Menu order
+        if(oldBundle.containsKey("minestrone")) {
+            oldBundle.putString("minestrone", oldBundle.getString("minestrone") );//passing ordered food name
+            oldBundle.putDouble("price_minestrone", oldBundle.getDouble("price_minestrone"));//passing ordered food price
+            oldBundle.putInt("q_minestrone", oldBundle.getInt("q_minestrone"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("caesar")) {
+            oldBundle.putString("caesar", oldBundle.getString("caesar") );//passing ordered food name
+            oldBundle.putDouble("price_caesar", oldBundle.getDouble("price_caesar"));//passing ordered food price
+            oldBundle.putInt("q_caesar", oldBundle.getInt("q_caesar"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("spaghetti")) {
+            oldBundle.putString("spaghetti", oldBundle.getString("spaghetti") );//passing ordered food name
+            oldBundle.putDouble("price_spaghetti", oldBundle.getDouble("price_spaghetti"));//passing ordered food price
+            oldBundle.putInt("q_spaghetti", oldBundle.getInt("q_spaghetti"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("lasagna")) {
+            oldBundle.putString("lasagna", oldBundle.getString("lasagna") );//passing ordered food name
+            oldBundle.putDouble("price_lasagna", oldBundle.getDouble("price_lasagna"));//passing ordered food price
+            oldBundle.putInt("q_lasagna", oldBundle.getInt("q_lasagna"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("fettuccine")) {
+            oldBundle.putString("fettuccine", oldBundle.getString("fettuccine") );//passing ordered food name
+            oldBundle.putDouble("price_fettuccine", oldBundle.getDouble("price_fettuccine"));//passing ordered food price
+            oldBundle.putInt("q_fettuccine", oldBundle.getInt("q_fettuccine"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("coke")) {
+            oldBundle.putString("coke", oldBundle.getString("coke") );//passing ordered food name
+            oldBundle.putDouble("price_coke", oldBundle.getDouble("price_coke"));//passing ordered food price
+            oldBundle.putInt("q_coke", oldBundle.getInt("q_coke"));//passing ordered food quantity
+        }
+        if(oldBundle.containsKey("icedtea")) {
+            oldBundle.putString("icedtea", oldBundle.getString("icedtea") );//passing ordered food name
+            oldBundle.putDouble("price_icedtea", oldBundle.getDouble("price_icedtea"));//passing ordered food price
+            oldBundle.putInt("q_icedtea", oldBundle.getInt("q_icedtea"));//passing ordered food quantity
+        }
+        oldBundle.putDouble("subtotal", oldBundle.getDouble("subtotal"));
+        return oldBundle;
     }
 }

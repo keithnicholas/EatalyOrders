@@ -24,4 +24,8 @@
         <item>Cash</item>
         <item>Debit</item>
     </string-array>
+
+    <string name="summary_food">Summary:</string>
+    <string name="summary_quantity">"\n"</string>
+    <string name="summary_price">"\n"</string>
 </resources>
