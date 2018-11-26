@@ -93,7 +93,7 @@ public class OrderSummary extends AppCompatActivity {
         TextView totalTv = findViewById(R.id.totalSummary);
         totalTv.setText("$" + decimal.format(total));
         //update order list
-        //note: "Remove" Button is currently u available
+        //note: "Remove" Button is currently unavailable
         extras.putDouble("subtotal", total);//update subtotal
         TextView summary = findViewById(R.id.summary_food);
         summary.setText(getFoodSummary());
@@ -103,10 +103,9 @@ public class OrderSummary extends AppCompatActivity {
         summary.setText(getPriceSummary());
     }
 
-    public void menu (View view){
+    public void previous (View view){
         //TODO: back to Menu with selected orders
-        Intent intent = new Intent(this, Menu.class);
-        startActivity(intent);
+        finish();
     }
 
     public void confirm(View view){
@@ -214,19 +213,19 @@ public class OrderSummary extends AppCompatActivity {
     public String getPriceSummary() {
         String str = "\n";
         if(extras.containsKey("price_minestrone"))
-            str+= "$" + (extras.getInt("q_minestrone") * extras.getDouble("price_minestrone")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_minestrone") * extras.getDouble("price_minestrone"))) + '\n';
         if(extras.containsKey("price_caesar"))
-            str+= "$" + (extras.getInt("q_caesar") * extras.getDouble("price_caesar")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_caesar") * extras.getDouble("price_caesar"))) + '\n';
         if(extras.containsKey("price_spaghetti"))
-            str+= "$" + (extras.getInt("q_spaghetti") * extras.getDouble("price_spaghetti")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_spaghetti") * extras.getDouble("price_spaghetti"))) + '\n';
         if(extras.containsKey("price_lasagna"))
-            str+= "$" + (extras.getInt("q_lasagna") * extras.getDouble("price_lasagna")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_lasagna") * extras.getDouble("price_lasagna"))) + '\n';
         if(extras.containsKey("price_fettuccine"))
-            str+= "$" + (extras.getInt("q_fettuccine") * extras.getDouble("price_fettuccine")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_fettuccine") * extras.getDouble("price_fettuccine"))) + '\n';
         if(extras.containsKey("price_coke"))
-            str+= "$" + (extras.getInt("q_coke") * extras.getDouble("price_coke")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_coke") * extras.getDouble("price_coke"))) + '\n';
         if(extras.containsKey("price_icedtea"))
-            str+= "$" + (extras.getInt("q_icedtea") * extras.getDouble("price_icedtea")) + '\n';
+            str+= "$" + (decimal.format(extras.getInt("q_icedtea") * extras.getDouble("price_icedtea"))) + '\n';
         return str;
     }
 }
