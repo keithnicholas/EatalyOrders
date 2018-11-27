@@ -87,7 +87,10 @@ public class Booking extends AppCompatActivity {
             Toast.makeText(this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        if(displayDate.getText().toString().matches("Click here to select a date")) {
+            Toast.makeText(this, "Reservation Date missing", Toast.LENGTH_SHORT).show();
+            return;
+        }
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
