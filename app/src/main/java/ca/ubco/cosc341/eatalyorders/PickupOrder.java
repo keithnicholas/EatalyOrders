@@ -42,15 +42,17 @@ public class PickupOrder extends AppCompatActivity {
     }
 
     public void continueButton(View view){
-        if(editPhone.getText().toString().length() != 10){
-            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         if(editName.getText().toString().length() < 1){
             Toast.makeText(this, "Invalid name.", Toast.LENGTH_SHORT).show();
             return;
         }
+
+        if(editPhone.getText().toString().length() != 10){
+            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //validation for pickup time
         Calendar ca_now = Calendar.getInstance();
         Calendar ca_user_select = Calendar.getInstance();

@@ -6,5 +6,5 @@
     <color name="foreground_material_light">#a23327</color>
     <color name="black">#a23327</color>
     <color name="colorBackground">#afa194</color>
-    <color name="background_material_light">#afa194</color>
+    <color name="background_material_light">#ffffff</color>
 </resources>
