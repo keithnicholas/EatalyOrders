@@ -106,8 +106,8 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/confirmButton"
         android:layout_centerHorizontal="true"
-        android:onClick="menu"
-        android:text="Menu" />
+        android:onClick="previous"
+        android:text="Previous" />
 
     <TextView
         android:id="@+id/textView25"
@@ -146,9 +146,8 @@
         android:id="@+id/textView49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/subCutlery"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp"
+        android:layout_alignBaseline="@+id/addCutlery"
+        android:layout_alignEnd="@+id/textView43"
         android:text="Cutlery" />
 
     <TextView
@@ -161,17 +160,17 @@
 
     <TextView
         android:id="@+id/cutleryQuantity"
-        android:layout_width="wrap_content"
+        android:layout_width="29dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView49"
-        android:layout_toStartOf="@+id/confirmButton" />
+        android:layout_alignBaseline="@+id/addCutlery"
+        android:layout_toEndOf="@+id/addCutlery" />
 
     <TextView
         android:id="@+id/platesQuantity"
-        android:layout_width="wrap_content"
+        android:layout_width="29dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/subPlates"
-        android:layout_toStartOf="@+id/confirmButton" />
+        android:layout_alignBaseline="@+id/addPlates"
+        android:layout_toEndOf="@+id/addCutlery" />
 
     <EditText
         android:id="@+id/editText2"
@@ -187,11 +186,12 @@
         android:id="@+id/summary_food"
         android:layout_width="87dp"
         android:layout_height="185dp"
-        android:layout_alignStart="@+id/textView25"
         android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView25"
         android:layout_marginStart="0dp"
         android:layout_marginTop="22dp"
-        android:text="@string/summary_food" />
+        android:text="@string/summary_food"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
         android:id="@+id/summary_quantity"

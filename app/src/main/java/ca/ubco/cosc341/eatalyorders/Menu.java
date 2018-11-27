@@ -288,36 +288,36 @@ public class Menu extends AppCompatActivity {
     public Bundle getOrder() {
         Bundle bundle = new Bundle();
         if(minestrone > 0) {
-            bundle.putString("minestrone", "minestrone" );//passing ordered food name
+            bundle.putString("minestrone", "Minestrone" );//passing ordered food name
             bundle.putDouble("price_minestrone", minePrice);//passing ordered food price
             bundle.putInt("q_minestrone", minestrone);//passing ordered food quantity
         }
         if(caesar > 0) {
-            bundle.putString("caesar", "caesar" );//passing ordered food name
+            bundle.putString("caesar", "Caesar" );//passing ordered food name
             bundle.putDouble("price_caesar", caesarPrice);//passing ordered food price
             bundle.putInt("q_caesar", caesar);//passing ordered food quantity
         }
         if(spaghetti > 0) {
-            bundle.putString("spaghetti", "spaghetti" );//passing ordered food name
+            bundle.putString("spaghetti", "Spaghetti" );//passing ordered food name
             bundle.putDouble("price_spaghetti", spagPrice);//passing ordered food price
             bundle.putInt("q_spaghetti", spaghetti);//passing ordered food quantity
         }if(lasagna > 0) {
-            bundle.putString("lasagna", "lasagna" );//passing ordered food name
+            bundle.putString("lasagna", "Lasagna" );//passing ordered food name
             bundle.putDouble("price_lasagna", lasPrice);//passing ordered food price
             bundle.putInt("q_lasagna", lasagna);//passing ordered food quantity
         }
         if(fettuccine > 0) {
-            bundle.putString("fettuccine", "fettuccine" );//passing ordered food name
+            bundle.putString("fettuccine", "Fettuccine" );//passing ordered food name
             bundle.putDouble("price_fettuccine", fettPrice);//passing ordered food price
             bundle.putInt("q_fettuccine", fettuccine);//passing ordered food quantity
         }
         if(coke > 0) {
-            bundle.putString("coke", "coke" );//passing ordered food name
+            bundle.putString("coke", "Coke" );//passing ordered food name
             bundle.putDouble("price_coke", cokePrice);//passing ordered food price
             bundle.putInt("q_coke", coke);//passing ordered food quantity
         }
         if(icedtea > 0) {
-            bundle.putString("icedtea", "icedtea" );//passing ordered food name
+            bundle.putString("icedtea", "Iced Tea" );//passing ordered food name
             bundle.putDouble("price_icedtea", ITPrice);//passing ordered food price
             bundle.putInt("q_icedtea", icedtea);//passing ordered food quantity
         }
