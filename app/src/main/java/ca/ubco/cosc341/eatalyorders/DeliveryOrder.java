@@ -45,13 +45,14 @@ public class DeliveryOrder extends AppCompatActivity {
     }
 
     public void continueButton(View view){
-        if(editPhone.getText().toString().length() != 10){
-            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
-            return;
-        }
 
         if(editName.getText().toString().length() < 2){
             Toast.makeText(this, "Please enter a valid name.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(editPhone.getText().toString().length() != 10){
+            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -61,14 +62,14 @@ public class DeliveryOrder extends AppCompatActivity {
         }
 
         //validation for pickup time
-        Calendar ca_now = Calendar.getInstance();
-        Calendar ca_user_select = Calendar.getInstance();
-        ca_user_select.set(Calendar.HOUR, Integer.parseInt(spinnerH.getSelectedItem().toString()));
-        ca_user_select.set(Calendar.MINUTE, Integer.parseInt(spinnerM.getSelectedItem().toString()));
-        if(ca_now.before(ca_user_select)) {
-            Toast.makeText(this, "Invalid Delivery Time.", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        Calendar ca_now = Calendar.getInstance();
+//        Calendar ca_user_select = Calendar.getInstance();
+//        ca_user_select.set(Calendar.HOUR, Integer.parseInt(spinnerH.getSelectedItem().toString()));
+//        ca_user_select.set(Calendar.MINUTE, Integer.parseInt(spinnerM.getSelectedItem().toString()));
+//        if(ca_now.before(ca_user_select)) {
+//            Toast.makeText(this, "Invalid Delivery Time.", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         Intent intent = new Intent(this, OrderSummary.class);
         //rewrote intent content by using Bundle

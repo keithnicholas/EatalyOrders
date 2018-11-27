@@ -54,14 +54,14 @@ public class PickupOrder extends AppCompatActivity {
         }
 
         //validation for pickup time
-        Calendar ca_now = Calendar.getInstance();
-        Calendar ca_user_select = Calendar.getInstance();
-        ca_user_select.set(Calendar.HOUR, Integer.parseInt(spinnerH.getSelectedItem().toString()));
-        ca_user_select.set(Calendar.MINUTE, Integer.parseInt(spinnerM.getSelectedItem().toString()));
-        if(ca_now.before(ca_user_select)) {
-            Toast.makeText(this, "Invalid Pickup Time.", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        Calendar ca_now = Calendar.getInstance();
+//        Calendar ca_user_select = Calendar.getInstance();
+//        ca_user_select.set(Calendar.HOUR, Integer.parseInt(spinnerH.getSelectedItem().toString()));
+//        ca_user_select.set(Calendar.MINUTE, Integer.parseInt(spinnerM.getSelectedItem().toString()));
+//        if(ca_now.before(ca_user_select)) {
+//            Toast.makeText(this, "Invalid Pickup Time.", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
         Intent intent = new Intent(this, OrderSummary.class);
         Bundle bundle = getOrder();

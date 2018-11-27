@@ -88,7 +88,7 @@ public class Booking extends AppCompatActivity {
             return;
         }
         if(displayDate.getText().toString().matches("Click here to select a date")) {
-            Toast.makeText(this, "Reservation Date missing", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please pick a date", Toast.LENGTH_SHORT).show();
             return;
         }
         Calendar cal = Calendar.getInstance();
@@ -99,12 +99,12 @@ public class Booking extends AppCompatActivity {
 
         if(Integer.parseInt(arr_date[0]) < month || Integer.parseInt(arr_date[1]) < day
                 || Integer.parseInt(arr_date[2]) < year) {
-            Toast.makeText(this, "Invalid Reservation Date", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please pick a date", Toast.LENGTH_SHORT).show();
             return;
         }
         if(editPeople.getText().toString().length() < 1 ||
                 Integer.parseInt(editPeople.getText().toString()) < 1){
-            Toast.makeText(this, "Invalid number of people", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid number of guests", Toast.LENGTH_SHORT).show();
             return;
         }
 

@@ -47,7 +47,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView8"
         android:layout_marginTop="233dp"
-        android:text="Number of People:" />
+        android:text="Number of Guests:" />
 
     <Button
         android:id="@+id/reserveButton"
