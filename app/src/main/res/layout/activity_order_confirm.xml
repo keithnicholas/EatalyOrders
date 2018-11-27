@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/textView22"
-        android:layout_marginBottom="179dp"
+        android:layout_marginBottom="133dp"
         android:text="Order #:"
         android:textSize="20dp" />
 
