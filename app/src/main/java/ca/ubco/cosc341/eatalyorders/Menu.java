@@ -264,10 +264,10 @@ public class Menu extends AppCompatActivity {
     public void continueButton(View view){
 //send data to order summary
         if(pickup.isChecked() == delivery.isChecked()){
-            Toast.makeText(this, "Please pick a takeout option.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please pick a takeout option", Toast.LENGTH_SHORT).show();
             return;
         }else if(subtotal == 0){
-            Toast.makeText(this, "Your cart is empty.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Your cart is empty", Toast.LENGTH_SHORT).show();
             return;
         }else if (subtotal > 0 && pickup.isChecked()){
             Intent intent = new Intent(this, PickupOrder.class);
@@ -283,6 +283,10 @@ public class Menu extends AppCompatActivity {
             startActivity(intent);
         }
 
+    }
+
+    public void home (View view){
+        finish();
     }
 
     public Bundle getOrder() {

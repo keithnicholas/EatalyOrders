@@ -57,8 +57,9 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="40dp"
         android:layout_marginEnd="31dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="reserve"
-        android:text="Reserve" />
+        android:text="Confirm" />
 
     <Button
         android:id="@+id/cancelButton"

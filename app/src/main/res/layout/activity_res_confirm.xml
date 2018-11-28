@@ -25,6 +25,7 @@
         android:layout_alignEnd="@+id/resConfirmTextView"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="48dp"
+        android:background="@android:color/holo_blue_dark"
         android:onClick="finish"
         android:text="Finish" />
 </RelativeLayout>

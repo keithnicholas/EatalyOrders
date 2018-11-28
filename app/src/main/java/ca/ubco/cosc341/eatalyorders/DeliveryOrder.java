@@ -47,17 +47,17 @@ public class DeliveryOrder extends AppCompatActivity {
     public void continueButton(View view){
 
         if(editName.getText().toString().length() < 2){
-            Toast.makeText(this, "Please enter a valid name.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter a valid name", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(editPhone.getText().toString().length() != 10){
-            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid phone number", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if(editAddress.getText().toString().length() < 5){
-            Toast.makeText(this, "Please enter an address.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter an address of at least 5 characters", Toast.LENGTH_SHORT).show();
             return;
         }
 

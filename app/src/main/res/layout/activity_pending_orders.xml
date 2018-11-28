@@ -33,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/orderNum"
         android:layout_alignTop="@+id/homeButton"
+        android:background="@color/design_default_color_primary_dark"
         android:onClick="cButton"
         android:text="Confirm" />
 

@@ -360,7 +360,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/textView4"
         android:layout_marginEnd="8dp"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/q2"
@@ -368,7 +368,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView29"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/q3"
@@ -376,7 +376,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView12"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/q4"
@@ -384,7 +384,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView13"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/q5"
@@ -392,7 +392,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView14"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/textView38"
@@ -408,7 +408,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView11"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/textView40"
@@ -424,7 +424,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/textView28"
         android:layout_toEndOf="@+id/addMine"
-        android:text="Q" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/textView44"
@@ -445,5 +445,15 @@
         android:layout_marginEnd="22dp"
         android:text="$0.00"
         android:textAppearance="@android:style/TextAppearance.Holo.Widget.TextView" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/confirm"
+        android:layout_marginStart="123dp"
+        android:onClick="home"
+        android:text="Home" />
 
 </RelativeLayout>
