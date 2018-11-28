@@ -78,13 +78,19 @@ public class Booking extends AppCompatActivity {
     }
 
     public void reserve(View view){
-        if(editName.getText().toString().length() < 1){
+        if( (editName.getText().toString().length() < 2) && (editPhone.getText().toString().length() != 14)&& (displayDate.getText().toString().matches("Click here to select a date"))  &&(editPeople.getText().toString().length() < 1 ||
+                Integer.parseInt(editPeople.getText().toString()) < 1)){
+            Toast.makeText(this, "Please enter your information", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(editName.getText().toString().length() < 2){
             Toast.makeText(this, "Invalid Name", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(editPhone.getText().toString().length() != 10){
-            Toast.makeText(this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
+        if(editPhone.getText().toString().length() != 14){
+            Toast.makeText(this, "Please enter a 10 digit phone number", Toast.LENGTH_SHORT).show();
             return;
         }
         if(displayDate.getText().toString().matches("Click here to select a date")) {

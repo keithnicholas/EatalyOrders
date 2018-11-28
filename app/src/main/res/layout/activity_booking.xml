@@ -106,16 +106,17 @@
         android:layout_alignBottom="@+id/textView16"
         android:layout_alignEnd="@+id/datePicker"></Spinner>
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/pnEditText"
         android:layout_width="172dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/nResEditText"
         android:layout_marginTop="73dp"
-        android:ems="10"
+        android:ems="14"
         android:hint="(999)-999-9999"
-        android:inputType="number" />
+        android:inputType="phone"
+        app:met_mask="(###)-###-####"/>
 
     <EditText
         android:id="@+id/peopleEditText"

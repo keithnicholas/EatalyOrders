@@ -19,23 +19,24 @@
         android:id="@+id/nameDEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/pnDEditText"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textPersonName" />
 
-    <EditText
+    <com.santalu.maskedittext.MaskEditText
         android:id="@+id/pnDEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="34dp"
-        android:layout_marginTop="77dp"
-        android:ems="10"
+        android:layout_alignStart="@+id/nameDEditText"
+        android:layout_marginTop="75dp"
+        android:ems="14"
         android:hint="(999)-999-9999"
-        android:inputType="number" />
+        android:inputType="phone"
+        app:met_mask="(###)-###-####" />
 
     <TextView
         android:id="@+id/textView33"

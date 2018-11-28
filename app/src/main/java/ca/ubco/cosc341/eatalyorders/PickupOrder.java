@@ -42,14 +42,18 @@ public class PickupOrder extends AppCompatActivity {
     }
 
     public void continueButton(View view){
-
-        if(editName.getText().toString().length() < 1){
-            Toast.makeText(this, "Invalid name.", Toast.LENGTH_SHORT).show();
+        if((editName.getText().toString().length() < 2) && (editPhone.getText().toString().length() != 14)){
+            Toast.makeText(this, "Please enter your information", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        if(editPhone.getText().toString().length() != 10){
-            Toast.makeText(this, "Invalid phone number.", Toast.LENGTH_SHORT).show();
+        if(editName.getText().toString().length() < 2){
+            Toast.makeText(this, "Invalid name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if(editPhone.getText().toString().length() != 14){
+            Toast.makeText(this, "Please enter a 10 digit phone number", Toast.LENGTH_SHORT).show();
             return;
         }
 
